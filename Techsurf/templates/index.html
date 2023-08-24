@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+	    margin-left:500px;
+        margin-top:30px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+     }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+	margin-top:150px;
+    }
+    .input-container, .output-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        width: 45%;
+    }
+    .input-container {
+        margin-right: 20px;
+    }
+    .output-container {
+        border-left: 1px solid #ccc;
+        padding-left: 20px;
+    }
+    h2 {
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    textarea {
+        width: 95%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        resize: vertical;
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    p {
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+    <h1>Content Generation Tool</h1>
+    <div class="container">
+        <div class="input-container">
+            <h2>Input</h2>
+            <form action="/" method="post">
+                <textarea name="input_text" rows="5" placeholder="Enter your text here"></textarea>
+                <br>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+        <div class="output-container">
+            <h2>Output</h2>
+            <p>{{ output_text }}</p>
+        </div>
+    </div>
+</body>
+</html>
